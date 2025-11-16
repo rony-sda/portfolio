@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Special+Gothic:wght@400..700&display=swap');
+
+
+
+@import "tailwindcss";
+
+/* এখানে Tailwind custom theme extend করতে হবে */
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --font-rubik: "Rubik", sans-serif;
+  --font-special: special gothic, sans-serif;
+}
+
+/* কাস্টম স্টাইল যা Tailwind দিয়ে করা যাবে না */
+.loading-text div::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #3CCF91;
+  opacity: 0;
+}
+
+html, body {
+  font-family: var(--font-inter);
+  background-color: #000;
+  color: white;
+  scroll-behavior: smooth;
+    cursor: none;
+}
+
+
+* {
+  cursor: none;
+}
+
+
+
+
+
+@layer components{
+.custom-cursor-inner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    background-color: #3CCF91;
+    /* softer lime-green */
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform-origin: center;
+    will-change: transform;
+    margin-left: -7px;
+    margin-top: -7px;
+  }
+
+  /* Outer outlined circle */
+  .custom-cursor-outer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #3CCF91;
+    border-radius: 50%;
+    background-color: transparent;
+    pointer-events: none;
+    z-index: 9998;
+    transform-origin: center;
+    will-change: transform;
+    margin-left: -18px;
+    margin-top: -18px;
+    transition: opacity 0.25s ease, transform 0.15s ease;
+  }
+}
+
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 60s linear infinite;
+}
+
+@media (min-width: 768px) {
+  .animate-scroll {
+    animation-duration: 50s;
+  }
+}
+
+.animate-paused {
+  animation-play-state: paused;
+}
+
+
+@keyframes shine {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shine {
+  animation: shine 2s linear infinite;
+}
+
+
+@layer base {
+
+  /* Webkit (Chrome, Safari, Edge, Mobile) */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-width: none;
+    /* hide scrollbar */
+    -ms-overflow-style: none;
+    /* IE & old Edge */
+  }
+}
