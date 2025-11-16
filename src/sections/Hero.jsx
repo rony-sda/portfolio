@@ -63,7 +63,7 @@ const Hero = () => {
           className='flex pointer-events-auto flex-wrap gap-4 mt-6 justify-center lg:justify-start items-center'
         >
             <a
-              href="https://github.com/mehedihasan6050" target="_blank" rel="noopener noreferrer"
+              href="https://github.com/rony-sda" target="_blank" rel="noopener noreferrer"
             className='bg-[#292929] px-4 py-2 flex items-center gap-2 text-lg font-semibold rounded-md transition-all duration-300'
             >
               <FaGithub color="#3CCF91"/>
