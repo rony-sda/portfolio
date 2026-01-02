@@ -38,7 +38,7 @@ const Hero = () => {
           <span>Mehedi Hasan</span>
           </h1>
           <TextType
-  text={["Programmer | Full Stack Developer | DevOps Enthusiast"]}
+  text={["Programmer | Full Stack Developer | App Developer"]}
   typingSpeed={75}
   pauseDuration={1500}
   showCursor={true}
@@ -53,7 +53,7 @@ const Hero = () => {
            💡 Passionate about learning and creating
             </p>
             <p className='text-[#c8ced5] text-base'>
-           ⚙️ Currently specializing in DevOps practices
+           🤖 Actively enhancing my expertise in artificial intelligence and machine learning.
           </p>
         </div>
 

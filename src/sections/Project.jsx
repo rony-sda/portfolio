@@ -1,13 +1,16 @@
 
-import project1 from "../assets/Screenshot 2025-09-30 170713.png"
-import project2 from "../assets/Screenshot 2025-09-30 171111.png"
+import project1 from "../assets/AiChat.png"
+import project2 from "../assets/YtClone.png"
 import { GoArrowUpRight } from "react-icons/go";
 import {
   FaJs,
   FaReact,
   FaNodeJs,
-  FaDocker
+  FaDocker,
+  FaStore
 } from 'react-icons/fa'
+
+import { RiTailwindCssFill } from "react-icons/ri";
 import { BiLogoPostgresql,BiLogoTypescript, } from "react-icons/bi";
 import { SiMongodb, SiNextdotjs, SiMongoose, SiPrisma } from "react-icons/si";
 import ShinyText from "../components/ShinyText";
@@ -15,22 +18,23 @@ import { motion } from "framer-motion";
 import SplitText from "../components/SplitText";
 
 const projects = [
+   {
+    title: 'Ai ChatApp',
+    description: 'A modern, full-stack AI chat application built with Next.js, featuring multi-model AI support, real-time streaming, and persistent chat history. Experience seamless conversations with various AI models through a beautiful, intuitive interface.',
+    techStack: ['TypeScript', 'Next.js', 'PostgreSQL', 'Prisma', 'TailwindCss','Zustand'],
+    image: project1,
+    aosImage: 'fade-left',
+    codeLink: 'https://github.com/rony-sda/Ai-ChatApp'
+  },
   {
     title: 'Youtube Clone Streaming Platform',
     description: 'A full-stack YouTube-like application built with React and Express/MongoDB. It allows users to upload and watch videos, create and manage playlists and tweets, like/dislike content, subscribe to channels, comment, and track watch history or save videos for later — all in a modern, responsive UI.',
     techStack: ['JavaScript', 'React', 'Node & Express',  'MongoDB', 'Mongoose'],
-    image: project1,
+    image: project2,
     aosImage: 'fade-right',
     codeLink: 'https://github.com/rony-sda/Youtube-Clone'
-  },
-  {
-    title: 'Next Ecommerce Site',
-    description: 'Next-Ecommerce is a modern full-stack e-commerce platform designed to provide a seamless shopping experience. Users, sellers, and admins each have tailored dashboards and tools, making buying, selling, and managing products effortless. Built with Next.js and Express.js, it combines performance, security, and intuitive design.',
-    techStack: ['TypeScript', 'Next.js', 'Node & Express', 'PostgreSQL', 'Prisma', 'Docker'],
-    image: project2,
-    aosImage: 'fade-left',
-    codeLink: 'https://github.com/rony-sda/Next-Ecommerce'
-  },
+  }
+ 
 ];
 const Projects = () => {
  const techMap = {
@@ -44,6 +48,8 @@ const Projects = () => {
   PostgreSQL: { icon: BiLogoPostgresql, },
   Prisma: { icon: SiPrisma },
   Docker: { icon: FaDocker },
+  Zustand: {icon: FaStore},
+  TailwindCss: {icon: RiTailwindCssFill}
   }
   
   
