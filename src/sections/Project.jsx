@@ -1,6 +1,7 @@
 
 import project1 from "../assets/AiChat.png"
 import project2 from "../assets/YtClone.png"
+import project3 from '../assets/ecommerce.png'
 import { GoArrowUpRight } from "react-icons/go";
 import {
   FaJs,
@@ -33,7 +34,16 @@ const projects = [
     image: project2,
     aosImage: 'fade-right',
     codeLink: 'https://github.com/rony-sda/Youtube-Clone'
-  }
+  },
+  {
+
+    title: 'Next Ecommerce Site',
+    description: 'Next-Ecommerce is a modern full-stack e-commerce platform designed to provide a seamless shopping experience. Users, sellers, and admins each have tailored dashboards and tools, making buying, selling, and managing products effortless. Built with Next.js and Express.js, it combines performance, security, and intuitive design.',
+    techStack: ['TypeScript', 'Next.js', 'Node & Express', 'PostgreSQL', 'Prisma', 'Docker'],
+    image: project3,
+    aosImage: 'fade-left',
+    codeLink: 'https://github.com/rony-sda/Next-Ecommerce'
+  },
  
 ];
 const Projects = () => {
